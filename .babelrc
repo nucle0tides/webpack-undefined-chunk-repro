@@ -1,0 +1,12 @@
+{
+	"presets": [
+		"@babel/preset-react",
+		["@babel/preset-env", { "useBuiltIns": "entry", "modules": false }]
+	],
+	"plugins": [
+		"@loadable/babel-plugin",
+		"@babel/plugin-syntax-dynamic-import",
+		"@babel/plugin-syntax-import-meta",
+		"@babel/plugin-proposal-class-properties"
+	]
+}

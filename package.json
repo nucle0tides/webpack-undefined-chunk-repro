@@ -1,0 +1,42 @@
+{
+  "name": "webpack-undefined-chunk-repro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ColinxLLC/webpack-undefined-chunk-repro.git",
+  "author": "jhornby <johnathon.hornby@colinx.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/index.js",
+    "prestart": "npm run dist",
+    "dist": "npm-run-all --parallel webpack:*",
+    "predist": "npm run cleandist",
+    "webpack:server": "webpack --config ./webpack/server",
+    "webpack:client": "webpack --config ./webpack/client",
+    "cleandist": "rimraf dist/*"
+  },
+  "dependencies": {
+    "@loadable/babel-plugin": "5.2.2",
+    "@loadable/component": "5.2.2",
+    "@loadable/server": "5.5.0",
+    "@loadable/webpack-plugin": "5.4.0",
+    "express": "4.17.1",
+    "history": "4.9.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-router-dom": "5.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.2.2",
+    "@babel/plugin-syntax-dynamic-import": "7.2.0",
+    "@babel/plugin-syntax-import-meta": "7.2.0",
+    "@babel/plugin-proposal-class-properties": "7.5.5",
+    "@babel/preset-env": "7.2.3",
+    "@babel/preset-react": "7.0.0",
+    "babel-loader": "8.0.6",
+    "npm-run-all": "4.1.5",
+    "webpack": "4.39.3",
+    "webpack-cli": "3.3.7",
+    "webpack-node-externals": "1.7.2"
+  }
+}
